@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-/**
- * ForKelipatan29
- */
 public class ForKelipatan29 {
 
     public static void main(String[] args) {
@@ -16,9 +13,17 @@ public class ForKelipatan29 {
             if (i % kelipatan == 0) {
                 jumlah += i;
                 counter++;
-                System.out.printf("Banyaknya bilangan %d dari 1 sampai 50 adalah %d/n", kelipatan, counter);
-                System.out.printf("Total bilangan kelipatan %d dari 1 sampai 50 adalah %d/n", kelipatan, jumlah);
             }
+        }
+
+        if (counter == 0) {
+            System.out.println("Tidak ada bilangan kelipatan yang ditemukan.");
+        } else {
+            double rataRata = (double) jumlah / counter;
+
+            System.out.printf("Banyaknya bilangan %d dari 1 sampai 50 adalah %d\n", kelipatan, counter);
+            System.out.printf("Total bilangan kelipatan %d dari 1 sampai 50 adalah %d\n", kelipatan, jumlah);
+            System.out.printf("Rata-rata bilangan kelipatan %d dari 1 sampai 50 adalah %.2f\n", kelipatan, rataRata);
         }
     }
 }
